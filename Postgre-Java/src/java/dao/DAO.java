@@ -12,9 +12,12 @@ public class DAO {
 
     public void Conectar() throws Exception {       //Metodo con los datos de acceso
         try {
-            Class.forName("com.mysql.jdbc.Driver");
+//            Class.forName("com.mysql.jdbc.Driver");
+            Class.forName("org.postgresql.Driver");
 //            
-             cn = DriverManager.getConnection("jdbc:postgresql://localhost:3306/prueba","root","123456");
+//             cn = DriverManager.getConnection("jdbc:mysql://localhost/Prueba", "root", "123456");
+            cn = DriverManager.getConnection("jdbc:postgresql://localhost:5432/prueba",
+        "postgres", "123456");
 //            
         } catch (ClassNotFoundException | SQLException e) {
             FacesContext.getCurrentInstance().addMessage(null, new FacesMessage("No hay conexcion a la base de datos"));

@@ -8,18 +8,18 @@
         <title>Facelet Title</title>
         <link href="resource/css/main.css" rel="stylesheet" type="text/css"/>
         <link href="resource/css/util.css" rel="stylesheet" type="text/css"/>
-         <meta charset="UTF-8"/>
+        <meta charset="UTF-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1"/>
     </h:head>
 
     <h:body>
         <div class="limiter">
-            <div class="container-login100" style="background-image: url('https://3.bp.blogspot.com/-qRA_KIxIJwk/VdTtVJJYjcI/AAAAAAAAKdc/BJrxH-ZmGe8/s1600/Como%2Bcolocar%2Bun%2Blogo%2Bo%2Bfondo%2Ben%2Bla%2Bpantalla%2Bde%2Buna%2Blaptop%2Bcon%2BPhotoshop.jpg');">
+            <div class="container-login100" style="background-image: url('http://www.cinexplicacion.com.mx/2017/images/Muse-4K_.jpg');">
                 <div class="wrap-login100 p-l-110 p-r-110 p-t-62 p-b-33">
-                    
+
                     <h:form class="login100-form validate-form flex-sb flex-w"> 
-                      <span class="login100-form-title p-b-15">
-                            Eventos Vallegrande
+                        <span class="login100-form-title p-b-15">
+                            Eventos
                         </span>
 
                         <div class="p-t-31 p-b-9">
@@ -29,7 +29,7 @@
                         </div>
                         <div class="wrap-input100 validate-input" >
                             <p:inputText value="#{personaController.selected.dni}" class="input100" maxlength="8" >
-                                   <p:keyFilter regEx="/[\d\-]/"/>
+                                <p:keyFilter regEx="/[\d\-]/"/>
                             </p:inputText> 
                             <span class="focus-input100"></span>
                         </div>
@@ -40,11 +40,11 @@
                         </div>
                         <div class="wrap-input100 validate-input" >
                             <p:inputText value="#{personaController.selected.celular}" class="input100" maxlength="9" >
-                                 <p:keyFilter regEx="/[\d\-]/"/>
+                                <p:keyFilter regEx="/[\d\-]/"/>
                             </p:inputText> 
                             <span class="focus-input100"></span>
                         </div>
-                        
+
                         <div class="p-t-31 p-b-9">
                             <span class="txt1">
                                 Correo 
@@ -61,7 +61,7 @@
                         </div>
                         <div class="wrap-input100 validate-input" >
                             <p:autoComplete class="input100" style=" text-shadow: none; box-shadow: none;width:100%;" value="#{personaController.nombreUbigeo}" completeMethod="#{personaController.autocompleteDistUbigeo}" maxResults="10" forceSelection="true" emptyMessage="No se encontró"/>
-                                             </div>
+                        </div>
 
                         <div class="p-t-31 p-b-9">
                             <span class="txt1">
@@ -74,7 +74,7 @@
                                 <f:selectItem itemLabel="Correo Electronico" itemValue="Correo Electronico" />
                                 <f:selectItem itemLabel="Un Amigo" itemValue="Un Amigo" />
                             </p:selectOneRadio>                     
-                            
+
                         </div>
 
                         <div class="container-login100-form-btn m-t-17">
@@ -82,19 +82,16 @@
 
                         </div>
 
-<!--                        <div class="w-full text-center p-t-55">
-                            <a href="#" class="txt2 bo1">
-                                Vallegrande 2018
-                            </a>
-                        </div>-->
+                        <!--                        <div class="w-full text-center p-t-55">
+                                                    <a href="#" class="txt2 bo1">
+                                                        Vallegrande 2018
+                                                    </a>
+                                                </div>-->
                     </h:form>
-                    <div class="container-login100-form-btn m-t-17">
-                            <p:commandButton value="Register" class="login100-form-btn" actionListener="#{personaController.consultarDni()}" />
 
-                        </div>
-                        
-                        
-                 
+
+
+
                 </div>
             </div>
         </div>

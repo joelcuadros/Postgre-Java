@@ -12,7 +12,7 @@ public class UbigeoDao extends DAO {
         this.Conectar();
         ResultSet rs;
         try {
-            String sql = "SELECT CODUBI FROM ubigeo WHERE CONCAT(CONCAT(CONCAT(CONCAT(Dpto_Ubi,','),Prov_Ubi),','),Dist_Ubi) = ?";
+            String sql = "SELECT Cod_Ubi FROM UBIGEO WHERE CONCAT(CONCAT(CONCAT(CONCAT(Dpto_Ubi,','),Prov_Ubi),','),Dist_Ubi) = ?";
             PreparedStatement ps = this.getCn().prepareCall(sql);
             ps.setString(1, a);
             rs = ps.executeQuery();
@@ -35,10 +35,10 @@ public class UbigeoDao extends DAO {
         String sql;
         try {
             if (a == null || "".equals(a)) {
-                sql = "SELECT CONCAT(CONCAT(CONCAT(CONCAT(Dpto_Ubi,','),Prov_Ubi),','),Dist_Ubi) AS NOMBRE FROM ubigeo WHERE Prov_Ubi LIKE UPPER(?)";
+                sql = "SELECT CONCAT(CONCAT(CONCAT(CONCAT(Dpto_Ubi,','),Prov_Ubi),','),Dist_Ubi) AS NOMBRE FROM UBIGEO WHERE Prov_Ubi LIKE UPPER(?)";
                 a = "CAÑETE";
             } else {
-                sql = "SELECT CONCAT(CONCAT(CONCAT(CONCAT(Dpto_Ubi,','),Prov_Ubi),','),Dist_Ubi) AS NOMBRE FROM ubigeo WHERE Dist_Ubi like UPPER(?)";
+                sql = "SELECT CONCAT(CONCAT(CONCAT(CONCAT(Dpto_Ubi,','),Prov_Ubi),','),Dist_Ubi) AS NOMBRE FROM UBIGEO WHERE Dist_Ubi like UPPER(?)";
             }
             PreparedStatement ps = this.getCn().prepareCall(sql);
             ps.setString(1, "%" + a + "%");

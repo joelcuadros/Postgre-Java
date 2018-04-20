@@ -50,7 +50,7 @@ public class PersonaDao extends DAO {
     public void guardar(PersonaModel model, String codigo) throws Exception {
         try {
             this.Conectar();
-            String sql = "INSERT INTO registro (dni_reg,nomb_reg,ape_regm,ape_regp,cel_reg,correo_reg,cod_ubi,est_reg)  VALUES (?,UPPER(?),UPPER(?),UPPER(?),?,?,?,?)";
+            String sql = "INSERT INTO Registro (Dni_Reg,Nomb_Reg,Ape_Regm,Ape_Regp,Cel_Reg,Correo_Reg,Cod_Ubi,Est_Reg)  VALUES (?,UPPER(?),UPPER(?),UPPER(?),?,?,?,?)";
             PreparedStatement ps = this.getCn().prepareStatement(sql);
             ps.setString(1, model.getDni());
             ps.setString(2, model.getNombre());
