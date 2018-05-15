@@ -1,0 +1,21 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <title>Ejemplo GCP</title>
+        
+    </h:head>
+
+    <h:body>
+       <p:selectOneRadio id="console" style="height: 60px ;" class="radio" value="#{personaController.selected.medios}" >
+                                <f:selectItem itemLabel="Facebook" itemValue="Facebook" />
+                                <f:selectItem itemLabel="Correo Electronico" itemValue="Correo Electronico" />
+                                <f:selectItem itemLabel="Un Amigo" itemValue="Un Amigo" />
+       </p:selectOneRadio>    
+
+    </h:body>
+</html>
+
